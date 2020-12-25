@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+      </head>
+   <body>
+   <div>
+       <%if(imgdata.length>0){ imgdata.forEach((row)=>{%>
+        <img src="./uploads/<%= row.imagefile %>" style="width: 300px; height: 250px;">
+        <%})}%>
+   </div>
+  </body>
+</html>

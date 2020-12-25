@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.alertbox{
+  width: 100%;
+  border-radius: 5px;
+  background-color: palegreen;
+  padding: 0.8em;
+  font-size: large;
+  opacity: 0.8;
+}
+a {
+  color: #00B7FF;
+}
+table{
+  box-shadow: 2px 2px 15px gray;
+  border: #00B7FF 1px solid;
+  border-collapse: collapse;
+}
+thead{
+  color:white;
+  background-color: orangered;
+}
+tr{
+  border: #00B7FF 1px solid;
+}
+td{
+  padding: 10px;
+  border: #00B7FF 1px solid;
+}
+input{
+  border: orange 1px solid;
+  font-size: medium;
+}
+.btn{
+  background-color: orange;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: medium;
+  box-shadow: 1px 1px 2px gray;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+      </head>
+   <body>
+    <h1>Edit Records</h1>
+    <div>
+      <form action="/update/" role="form" method="post" enctype="multipart/form-data">
+        <table>
+          <tbody>
+            <input type="hidden" placeholder="Enter Name" name="id" value="<%= records._id%>">
+            <tr>
+              <td><label>Name</label></td>
+              <td><input type="text" placeholder="Enter Name" name="name" value="<%= records.name%>"></td>
+            </tr>
+            <tr>
+              <td><label>Email</label></td>
+              <td><input type="email" placeholder="Enter Email" name="email" value="<%= records.email%>"></td>
+            </tr>
+            <tr>
+              <td><label>Etype</label></td>
+              <td><select name="etype"><option  value="Hourly" <% if(records.etype =="Hourly"){%>selected<%}%>>Hourly</option>
+                <option value="Monthly" <% if(records.etype =="Monthly"){%>selected<%}%>>Monthly</option></select></td>
+            </tr>
+            <tr>
+              <td><label>Hourly Rate</label></td>
+              <td><input type="number" placeholder="Enter Hourly Rate" name="rate" value="<%= records.hourlyrate%>"></td>
+            </tr>
+            <tr>
+              <td><label>Total Hours</label></td>
+              <td><input type="number" placeholder="Enter Total Ammount" name="total" value="<%= records.totalhours%>"></td>
+            </tr>
+            <tr>
+              <td><label>Choose File</label></td>
+              <td><img alt="xdg" src="/uploads/<%= records.image %>" style="width: 100px; height: 80px;">
+               <br/> <input type="file"  name="profile"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input class="btn" type="submit" value="Submit"></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
